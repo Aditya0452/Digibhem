@@ -1,0 +1,392 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(1, 1, 16);
+    background: linear-gradient(130deg, #040130 10%, #030377 50%, #01013d 100%);
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.vector3{
+    position:absolute;
+    left:-10px;
+    top: 25%;
+    width: 35rem;
+    height: 20rem;
+    margin:10px;
+    border-radius: 0px 50px 50px 0px;
+    box-shadow: #5db5f9c6 0px 25px 20px -15px;
+    transition:transform 4s ease-out;
+    cursor: pointer;
+}
+
+.vector3:hover {
+    top: 35%;
+    left:5%;
+margin: 30px;
+transition: 5s;
+transition:1s ease-out;
+transform: scale(1.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.digibhem{
+    position:absolute;
+    left:30px ;
+    top:-20px;
+    font-size: 70px;
+    color: white;
+    background: #25CCD9;
+    background: -webkit-linear-gradient(to left, #25CCD9 17%, #3C58C7 100%);
+    background: -moz-linear-gradient(to left, #25CCD9 17%, #3C58C7 100%);
+    background: linear-gradient(to left, #25CCD9 17%, #3C58C7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+}
+
+.content {
+    z-index: 1;
+    display: flex;
+    position:absolute;
+    top:70%;
+    font-size:20px;
+    color: #dbdada;
+    margin:25px;
+    cursor: pointer;
+
+}
+ .vector3:hover + .content{
+    position:absolute;
+    color: #090378;
+    border-radius:0px 0px 50px 50px ;
+    padding:25px;
+    backdrop-filter: blur(25px);
+    
+}
+
+.vector5 {
+    top:100%;
+    position:absolute;
+    display: block;
+    height:18rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: #032038c7 0px 60px 40px -7px;
+}
+
+form img{
+    margin-bottom: 20px;
+    padding: 22px;
+    height:250px;
+    border-radius:90px;
+    box-shadow: #100139ca 0px 60px 40px -7px;
+}
+
+img :hover{
+   /* margin-bottom: 20px;
+    padding: 22px;
+    height:235px;
+    border-radius:90px;*/
+    box-shadow: #100139 0px 60px 40px -7px;
+}
+
+form {
+   /* background-color: #646b8dc0;*/
+   display: block;
+   position: relative;
+   left: 350px;
+    background-image: linear-gradient(120deg, #01012a 0%, #5b63d6ac 100%);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+   border:3px solid ;
+   box-shadow: #242441a5 0px 50px 100px -20px, #0000008b 0px 30px 60px -30px, #0f305159 0px -2px 6px 0px inset;
+   cursor: pointer;
+}
+
+/* Border animation effect*/
+   
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height:auto;
+    --card-width:var(520px);
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  .card {
+    position:relative;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 20px;
+    border-radius: 15px;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+  }
+  .card:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  .card:hover:before,
+  .card:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  .card::before {
+    content: "";
+    width:550px;
+    height: 102%;
+    border-radius: 15px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height:auto;
+    width: 500px;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+  
+      
+/* ------------------------- */
+
+.flex{
+    position:relative;
+    display: flex inline;
+    align-self: center baseline;
+    padding: 8px 0px;
+    justify-items: space-evenly;
+}
+.flex label{
+    margin-left: 12px;
+}
+.checkin label{
+    margin-left:0px ;
+}
+h1 {
+
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f4f2f2;
+}
+
+label, legend {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+.note{
+    color: #f4f2f2;
+    margin: 30px 0px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #fafafade;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #cccccc00;
+    color: #ffffff;
+
+}
+input[type="text"]{
+    -webkit-text-fill-color: #ffffffda;
+}
+input[type="date"]{
+    width:145px;
+    margin-right:8px;
+}
+input[type="number"]{
+    width:130px;
+    margin: 0px 8px;
+
+}
+
+input[type="checkbox"] {
+    display: inline;
+    margin-right: 5px;
+ 
+}
+
+
+fieldset {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 90%;
+    display: flex;
+    align-self: center baseline;
+}
+.checkbox-container label {
+    display: inline;  /* Display containers inline */
+    margin-right: 20px; 
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;      /* Add some spacing between the checkbox and its label */
+}
+
+
+input[type="submit"] {
+    background-color: #026ffd;
+    color: #ffffff;
+    font-size: large;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px, #0a2540a7 0px -2px 6px 0px inset;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #00d824;
+}
+
+/* ... Your other CSS ... */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width:500px;
+    height:400px;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+    border-radius: 10px;
+    color: black;
+    box-shadow: #32325dc2 0px 50px 100px -20px, #4b8bf2be 0px 30px 60px -30px, #0a2540cb 0px -2px 6px 0px inset;
+
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles specific for the Confirm Booking button */
+.confirmBooking {
+    width:200px; height:40px;
+    border-radius:5px;
+    background-color: #1c77ff;
+    color: white;
+    padding: 15px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00df0b;
+    color: white;
+    cursor: pointer;
+}
+
+@media print {
+    /* Hide other elements and only show the content of the modal */
+    body * {
+        visibility: hidden;
+    }
+
+    .modal, .modal-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        visibility: visible;
+        color: black;
+    }
+
+    .modal-content * {
+        visibility: visible;
+    }
+
+    /* Hide the print button and other controls for the print view */
+    #printButton,.close-button {
+        display: none;
+    }
+}
