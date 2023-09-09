@@ -320,8 +320,8 @@ input[type="submit"]:hover {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
+    margin:10%;
+    padding: 35px;
     border: 1px solid #888;
     width:500px;
     height:400px;
@@ -388,5 +388,86 @@ button:hover {
     /* Hide the print button and other controls for the print view */
     #printButton,.close-button {
         display: none;
+    }
+}
+
+
+/* adjusting media display size between mobile and desktop  */
+
+/* ... Your existing CSS ... */
+
+@media screen and (max-width: 768px) {
+    /* Making the images responsive */
+    .vector3 {
+        width: 80%;
+        height: auto;
+        position: relative;
+        left: -40px;
+        top: 0;
+        margin: 0 auto;
+        box-shadow: none;
+        transition: none;
+    }
+    .vector3:hover {
+        top: 0;
+        left:-27px;
+        width: 90%;
+        margin: 0;
+        transform: none;
+    }
+    .vector5 {
+        width: 90%;
+        height: auto;
+        margin: 50px auto;
+        position: relative;
+        top: 0;
+    }
+    /* Adjusting text and form placement for mobile view */
+    .digibhem, .content {
+        position: relative;
+        left: 0;
+        text-align: column center;
+        width: 90%;
+    }
+    .digibhem{
+        display: flex center inline;
+        font-size: 50px;
+    }
+    .content {
+        top: 50%;
+        width:78%;
+        font-size: medium;
+    }
+    form {
+        left: 0;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .flex {
+        flex-direction:row;
+    }
+    .flex label {
+        margin-left: 0;
+    }
+    input[type="date"], input[type="number"] {
+        display:flex inline;
+        width: 75%;
+        margin: 10px 0;
+    }
+    /* Modal content width adjusted for mobile */
+    .modal-content {
+        margin:30% auto;
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Additional adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+    .digibhem {
+        font-size: 35px;
+    }
+    .content {
+        font-size: 15px;
     }
 }
